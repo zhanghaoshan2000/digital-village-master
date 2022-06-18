@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qweather-icons@1.1.0/font/qweather-icons.css">
+    <title>full-screen-dashboard</title>
+    <script inline src='node_modules/lib-flexible-for-dashboard/dist/index.js'></script>
+    <script>
+        dashboardFlexible.init(16 / 9);
+        window.onload = function () {
+            window.closeIcon = document.createElement('img')
+            // closeIcon.addEventListener('click', window.yyy4041, false)
+            // console.log(closeIcon)
+            closeIcon.id = 'yyy4041'
+            closeIcon.src = 'http://cuihua-dev-test.oss-cn-shanghai.aliyuncs.com/close.png'
+            closeIcon.style = 'width: 5%;position: absolute;right: 3%;top: 2.5vh;'
+            closeIcon.onclick = function () {
+                document.getElementsByTagName('body')[0].removeChild(
+                    document.getElementsByTagName('body')[0].firstChild
+                )
+            }
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://api.map.baidu.com/api?type=webgl&v=1.0&ak=3H6AdGznSsr5CC85chFOlDFfFdioL4Gr"></script>
+</head>
+
+<body style="background: #070c23;">
+    <noscript>
+        <strong>We're sorry but play-vuecli3 doesn't work properly without JavaScript enabled. Please enable it to
+            continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+</body>
+
+
+</html>
